@@ -6,11 +6,11 @@
     padding: 5px;
     margin: 5px;
     list-style: none;
-    background-color: darkslategrey;
+    background-color: #3B4CCA;
 }
 
 .flex-item {
-    background: firebrick;
+    background: #CC0000;
     padding: 5px;
     width: 110px;
     height: 15px;
@@ -21,8 +21,8 @@
     text-align: center;
 }
 
-.flex-item-long {
-  background: firebrick;
+.flex-item-double {
+  background: #CC0000;
   padding: 5px;
   width: 240px;
   height: 15px;
@@ -31,4 +31,21 @@
   font-weight: bold;
   font-size: auto;
   text-align: center;
+}
+
+.elements {
+  position:relative;
+  display:inline-block;
+}
+.elements_box {
+  display:none;
+}
+.elements:hover .elements_box {
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.5);
+  position:absolute;
+  top:0;
+  left:0;
+  display: inline-flexbox;
 }

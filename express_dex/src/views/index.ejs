@@ -7,50 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <script type="text/javascript">
+        const API_URL = <%-JSON.stringify(API_URL)%>
+        const PY_URL = <%-JSON.stringify(PY_URL)%>
+    </script>
+    <script type="text/javascript" src="/scripts/pyRequests.js"></script>
+    <script type="text/javascript" src="/scripts/dbRequests.js"></script>
 </head>
 <body>
-    <script>
-        async function newRequest() {
-            const url = "http://127.0.0.1:3060/api/random_encounter"
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                updateFields(data);
-            } catch (err) {
-                return alert(err + ' :(');
-            }
-        }
-        function updateFields(data) {
-            for(let field in data) {
-                if (field == 'sprite') {
-                    let psprite = document.getElementById(field).src = data[field]
-                } else {
-                    let element = document.getElementById(field).innerHTML = data[field]
-                }
-            }
-        }
-        function clearFields() {
-            console.log('HEHEHE')
-        }
-    </script>
     <h1>PokeTinder (nome provisório)</h1>
+    <p class="elements">
+        <img src="/assets/help.png" alt="/assets/tooltip.png" width="25" height="25">
+        <img class="elements_box" src="/assets/tooltip.png" alt="" width="200" height="200">
+    </p>
     <ul class="flex-container">
-        <li id="#" class="flex-item-long" type="Number"></li>
-        <li id="Name" class="flex-item-long" type="name"></li>
-        <li id="Shiny" class="flex-item-long" type="shiny"></li>
-        <img id="sprite" class="flex-img" src="/assets/loading.png" alt="" width="250" , height="250">
+        <li id="#" class="flex-item-double" type="Number"></li>
+        <li id="Name" class="flex-item-double" type="name"></li>
+        <li id="Shiny" class="flex-item-double" type="shiny"></li>
+        <img id="sprite" class="flex-img" src="/assets/pokeball.gif" alt="" width="240" , height="auto">
         <li id="HP" class="flex-item"></li>
         <li id="Attack" class="flex-item"></li>
         <li id="Defense" class="flex-item"></li>
-        <li id="Sp. Atk" class="flex-item"></li>
-        <li id="Sp. Def" class="flex-item"></li>
+        <li id="Atk.Spc" class="flex-item"></li>
+        <li id="Def.Spc" class="flex-item"></li>
         <li id="Speed" class="flex-item"></li>
         <li id="Generation" class="flex-item"></li>
         <li id="Type 1" class="flex-item"></li>
         <li id="Type 2" class="flex-item"></li>
-        <li id="Legendary" class="flex-item-long"></li>
-        <li id="Total" class="flex-item-long"></li>
+        <li id="Legendary" class="flex-item-double"></li>
+        <li id="Total" class="flex-item-double"></li>
         <button type="button" onclick="newRequest()">New Pokemon</button>
+        <button id="capture_btn" disabled type="button" onclick="capture()">Add to Team</button>
+        <form action="javascript:newTrainer(trainer.value)" onsubmit="return console.log('ok')">
+            <input type="text" name="trainer" id="trainer">
+            <button type="submit">Register Trainer</button>
+        </form>
     </ul>
 </body>
 
