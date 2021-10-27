@@ -51,8 +51,8 @@ Devido ao limite de tempo, o log dos monstros capturados pode ser observado pelo
 
 ## Observações
 
-> O projeto contém um arquivo ```docker-compose``` que foi utilizado durante a etapa de desenvolvimento e, então, adaptado para ser executado sem esta dependência.
-> O arquivo de variaveis de ambiente presente na pasta raiz do projeto, junto ao arquivo ```docker-compose``` pode ser utilizado para criar o ambiente com a adição de uma interface para o banco de dados, accessível pelo endereço ```http://localhost:8081```. Lá é possível ver os treinadores salvos e seus monstros capturados.
-> O escopo do projeto tomou proporções um pouco maiores do que o esperado e, portanto, algumas funcionalidades que estavam parcialmente prontas acabaram em estado de pendência.
-> O que seria desenvolvimento de sistemas sem imprevistos? ¯\_(ツ)_/¯
-> O trabalho aqui desenvolvido não possui fins lucrativos. Por favor Nintendo não me processa.
+- O projeto contém um arquivo ```docker-compose``` que foi utilizado durante a etapa de desenvolvimento e, então, adaptado para ser executado sem esta dependência.
+- O arquivo de variaveis de ambiente presente na pasta raiz do projeto, junto ao arquivo ```docker-compose``` pode ser utilizado para criar o ambiente com a adição de uma interface para o banco de dados, accessível pelo endereço ```http://localhost:8081```. Lá é possível ver os treinadores salvos e seus monstros capturados.
+- O escopo do projeto tomou proporções um pouco maiores do que o esperado e, portanto, algumas funcionalidades que estavam parcialmente prontas acabaram em estado de pendência.
+- O que seria desenvolvimento de sistemas sem imprevistos? ¯\\_(ツ)_/¯
+- O trabalho aqui desenvolvido não possui fins lucrativos. Por favor Nintendo não me processa.
