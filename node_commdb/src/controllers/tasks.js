@@ -51,10 +51,6 @@ async function getTrainer(trainer) {
 }
 
 
-router.get('/', async(req, res) => {
-    res.send('hi')
-})
-
 router.get('/health', (req, res) => {
     res.send('ok')
 })
