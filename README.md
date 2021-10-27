@@ -38,7 +38,7 @@ Ao final da utilização do ambiente, a rede e as imagens Docker criadas no proc
 
 ## Windows
 
-No sistema operacional windows, as instruções devem ser executadas uma a uma, na past raiz do projeto, na seguinte ordem:
+No sistema operacional Windows, as instruções devem ser executadas uma a uma, na past raiz do projeto, na seguinte ordem, utilizando Power Shell:
 1. No arquivo ```build_images.sh``` execute uma instrução por vez até a terceira;
 2. No arquivo ```run_stack.sh``` execute a instrução ```docker network...```;
 3. As instruções seguintes que possuem um ou mais campos ```${PROJECT_PATH}``` devem ser substituídos por ```$(pwd)``` para evitar o direcionamento errôneo das pastas.
