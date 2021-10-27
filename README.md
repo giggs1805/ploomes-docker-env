@@ -4,10 +4,10 @@
 
 O projeto consiste em um jogo de coletar um time de Pokemons baseado em geração aleatória. O usuário deve registrar seu nome de treinador e dentro de um número de tentativas definido, obter até 6 (seis) monstros. Este projeto roda em 4 containers diferentes, sendo eles, em ordem de dependência:
 
-1. O algoritmo de escolha aleatória de um pokemon dentro das possibilidades, em Python Flask. O algoritmo retorna uma coleção em JSON que é mostrada na tela, com as informações do monstro sorteado;
+1. O algoritmo de escolha aleatória de um pokemon dentro das possibilidades, em Flask (Python). O algoritmo retorna uma coleção em JSON que é mostrada na tela, com as informações do monstro sorteado;
 2. O banco de dados, em MongoDB, que guarda o registro de cada treinador e seus monstros capturados;
 3. A API, em Node, interpreta e processa as requisições vindas do frontend, como registro de treinador e registro de uma nova captura, as envia ao banco de dados e retorna ok;
-4. O frontend, usando Node Express, mostrando a tela principal da aplicação, a partir dela se pode enviar requisições tanto para o algortimo em python (1) quanto para o banco de  dados (2), que são tratados pela API (3).
+4. O frontend, servido em Express (Node js), mostra a tela principal da aplicação, a partir dela se pode enviar requisições tanto para o algortimo em Python (1) quanto para o banco de  dados (2), que são tratados pela API (3).
 
 As dependências do projeto são:
 a. O algoritmo em Python é independente de qualquer outro container;
@@ -28,7 +28,7 @@ As imagens Docker presentes no projeto necessitam receber informações sensíve
 
 As operações necessárias estão todas contidas em arquivos bash (.sh). Em sistemas operacionais Linux é possível ter todo o sistema rodando em apenas dois comandos de terminal.
 Para isso, os arquivos 'build_image.sh', 'run_stack.sh' e 'clean_stack.sh' devem possuir permissão para execução. Isto pode ser feito abrindo um terminal na pasta raiz do projeto ou, usando o comando ```cd [pasta]``` para se deslocar até a pasta raiz do projeto. Usando o comando ```chmod +x [nome_do_arquivo]``` habilitará permissão de execução.
-Com o comando ```./build_image.sh```, as imagens dos containers: Python Flask, Node API e Node Express serão criadas.
+Com o comando ```./build_image.sh```, as imagens dos containers: Flask (Python), Node API e Express (Node js) serão criadas.
 Após o fim da criação das imagens, o comando ```./run_stack.sh``` pode ser executado.
 Este script também cria a rede em docker necessária para conectar os containers interdependentes e também obtém a imagem Docker em mongo para executar o banco de dado.
 Ao final da utilização do ambiente, a rede e as imagens Docker criadas no processo podem ser removidas usando o script ```./clean_stack.sh```
