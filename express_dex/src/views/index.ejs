@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>PokeTinder (nome provisório)</title>
+    <title>Pokè Match</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
     <script type="text/javascript">
         const API_URL = <%-JSON.stringify(API_URL)%>
         const PY_URL = <%-JSON.stringify(PY_URL)%>
@@ -15,34 +16,75 @@
     <script type="text/javascript" src="/scripts/dbRequests.js"></script>
 </head>
 <body>
-    <h1>PokeTinder (nome provisório)</h1>
-    <p class="elements">
-        <img src="/assets/help.png" alt="/assets/tooltip.png" width="25" height="25">
-        <img class="elements_box" src="/assets/tooltip.png" alt="" width="200" height="200">
-    </p>
+    <div class="logo">
+        <img src="/assets/logo.png" alt="ÑITENDNO PFV NAO ME PROCESSA">
+    </div>
     <ul class="flex-container">
-        <li id="#" class="flex-item-double" type="Number"></li>
-        <li id="Name" class="flex-item-double" type="name"></li>
-        <li id="Shiny" class="flex-item-double" type="shiny"></li>
-        <img id="sprite" class="flex-img" src="/assets/pokeball.gif" alt="" width="240" , height="auto">
-        <li id="HP" class="flex-item"></li>
-        <li id="Attack" class="flex-item"></li>
-        <li id="Defense" class="flex-item"></li>
-        <li id="Atk.Spc" class="flex-item"></li>
-        <li id="Def.Spc" class="flex-item"></li>
-        <li id="Speed" class="flex-item"></li>
-        <li id="Generation" class="flex-item"></li>
-        <li id="Type 1" class="flex-item"></li>
-        <li id="Type 2" class="flex-item"></li>
-        <li id="Legendary" class="flex-item-double"></li>
-        <li id="Total" class="flex-item-double"></li>
-        <button type="button" onclick="newRequest()">New Pokemon</button>
-        <button id="capture_btn" disabled type="button" onclick="capture()">Add to Team</button>
-        <form action="javascript:newTrainer(trainer.value)" onsubmit="return console.log('ok')">
-            <input type="text" name="trainer" id="trainer">
-            <button type="submit">Register Trainer</button>
-        </form>
+        <div class="flex-container">
+            <li id="#" class="flex-item-double" type="Number"></li>
+            <li id="Name" class="flex-item-double" type="name"></li>
+        </div>
+        <div class="flex-subcontainer">
+            <div class="flex-container">
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">HP</li>
+                    <li id="HP" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Ataque</li>
+                    <li id="Attack" class="flex-item"></li>     
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Defesa</li>
+                    <li id="Defense" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Atq. Especial</li>
+                    <li id="Atk.Spc" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Def. Especial</li>
+                    <li id="Def.Spc" class="flex-item"></li>
+                </div>                        
+            </div>
+            <div class="flex-container">
+                <img id="sprite" class="flex-img" src="/assets/pokeball.gif" alt="" width="240" , height="auto">                
+            </div>
+            <div class="flex-container">
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Velocidade</li>
+                    <li id="Speed" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Geração</li>
+                    <li id="Generation" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Tipo 1</li>
+                    <li id="Type 1" class="flex-item"></li>
+                </div>
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Tipo 2</li>
+                    <li id="Type 2" class="flex-item"></li>
+                </div>        
+                <div class="flex-subcontainer">
+                    <li class="flex-item title">Total</li>
+                    <li id="Total" class="flex-item"></li>
+                </div>        
+            </div>
+        </div>
+        <div class=flex-container>
+            <li id="Shiny" class="flex-item-double" type="shiny"></li>
+            <li id="Legendary" class="flex-item-double"></li>
+        </div>
+        <div class="flex-container inputs">
+            <button type="button" onclick="newRequest()">New Pokemon</button>
+            <button id="capture_btn" disabled type="button" onclick="capture()">Add to Team</button>
+            <form action="javascript:newTrainer(trainer.value)" onsubmit="return console.log('ok')">
+                <input type="text" name="trainer" id="trainer">
+                <button type="submit">Register Trainer</button>
+            </form>    
+        </div>
     </ul>
 </body>
-
 </html>

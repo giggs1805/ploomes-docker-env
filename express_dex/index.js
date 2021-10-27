@@ -3,11 +3,13 @@ const path = require('path')
 const dotenv = require('dotenv').config()
 
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.EXP_PORT || 3000
 
 const app = express();
 
+// inicialização dos modulos utilizados
 app.set('view-engine', 'ejs')
+// mudança da pasta padrão, apontando corretamente para os arquivos estáticos
 app.set('views', path.join(__dirname, './src/views'))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/src/assets/'))
