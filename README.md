@@ -16,6 +16,8 @@ c. A API em Node é dependente do banco de dados estar rodando;
 d. O Frontend é dependente da API em Node e, por consequência, do banco de dados.
 
 
+
+
 # COMO EXECUTAR O AMBIENTE
 
 ## Variáveis de Ambiente
@@ -32,6 +34,8 @@ Este script também cria a rede em docker necessária para conectar os container
 Ao final da utilização do ambiente, a rede e as imagens Docker criadas no processo podem ser removidas usando o script ```./clean_stack.sh```
 
 
+
+
 ## Windows
 
 No sistema operacional windows, as instruções devem ser executadas uma a uma, na past raiz do projeto, na seguinte ordem:
@@ -40,17 +44,21 @@ No sistema operacional windows, as instruções devem ser executadas uma a uma, 
 3. As instruções seguintes que possuem um ou mais campos ```${PROJECT_PATH}``` devem ser substituídos por ```$(pwd)``` para evitar o direcionamento errôneo das pastas.
 
 
+
+
 # USO
 
-Toda a interatividade do projeto ocorre no frontend, acessado pelo endereço ```http://127.0.0.1:3000``` ou ```http://localhost:3000```, a interface é simples e contém 3[?] botões.
+Toda a interatividade do projeto ocorre no frontend, acessado pelo endereço ```http://127.0.0.1:3000``` ou ```http://localhost:3000```, a interface é simples e contém 3 botões.
 O primeiro passo é registrar um treinador, no botão ```[Register Trainer]```. Feito o registrado, é possível obter um monstro aleatório com o botão ```[New Pokemon]```. 
 O monstro sorteado possui diversos atributos, como Ataque, Defesa, Velocidade e até dois tipos de Elementos. Quanto maior o valor numérico ```[Total]```, mais forte é o Pokemon. Este monstro pode ser capturado com o botão abaixo ```[Add to Team]```.
 O número máximo de monstros que o usuário pode capturar é 6. Capturando um monstro faz com que seja feita uma nova requisição de pokemon, impedindo que o usuário faça uma equipe com 6 monstros iguais.
-Devido ao limite de tempo, o log dos monstros capturados pode ser observado pelo console da pagina da aplicação, acessível pelo botão F12 no navegador.
+
+
 
 
 ## Observações
 
+- Devido ao limite de tempo, o log dos monstros capturados pode ser observado pelo console da pagina da aplicação, acessível pelo botão F12 no navegador.
 - O projeto contém um arquivo ```docker-compose``` que foi utilizado durante a etapa de desenvolvimento e, então, adaptado para ser executado sem esta dependência.
 - O arquivo de variaveis de ambiente presente na pasta raiz do projeto, junto ao arquivo ```docker-compose``` pode ser utilizado para criar o ambiente com a adição de uma interface para o banco de dados, accessível pelo endereço ```http://localhost:8081```. Lá é possível ver os treinadores salvos e seus monstros capturados.
 - O escopo do projeto tomou proporções um pouco maiores do que o esperado e, portanto, algumas funcionalidades que estavam parcialmente prontas acabaram em estado de pendência.
