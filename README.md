@@ -48,6 +48,7 @@ No sistema operacional Windows, as instruções devem ser executadas uma a uma, 
 
 # USO
 
+(Use F12, na seção Console para verificar retornos nas requisições aos servidores)
 Toda a interatividade do projeto ocorre no frontend, acessado pelo endereço ```http://127.0.0.1:3000``` ou ```http://localhost:3000```, a interface é simples e contém 3 botões.
 O primeiro passo é registrar um treinador, no botão ```[Register Trainer]```. Feito o registrado, é possível obter um monstro aleatório com o botão ```[New Pokemon]```. 
 O monstro sorteado possui diversos atributos, como Ataque, Defesa, Velocidade e até dois tipos de Elementos. Quanto maior o valor numérico ```[Total]```, mais forte é o Pokemon. Este monstro pode ser capturado com o botão abaixo ```[Add to Team]```.
@@ -58,7 +59,7 @@ O número máximo de monstros que o usuário pode capturar é 6. Capturando um m
 
 ## Observações
 
-- Devido ao limite de tempo, o log dos monstros capturados pode ser observado pelo console da pagina da aplicação, acessível pelo botão F12 no navegador.
+- Devido ao limite de tempo, o log dos monstros capturados e códigos de erro recebidos podem ser observados pelo console da pagina da aplicação, acessível pelo botão F12 no navegador.
 - O projeto contém um arquivo ```docker-compose``` que foi utilizado durante a etapa de desenvolvimento e, então, adaptado para ser executado sem esta dependência.
 - O arquivo de variaveis de ambiente presente na pasta raiz do projeto, junto ao arquivo ```docker-compose``` pode ser utilizado para criar o ambiente com a adição de uma interface para o banco de dados, accessível pelo endereço ```http://localhost:8081```. Lá é possível ver os treinadores salvos e seus monstros capturados.
 - O escopo do projeto tomou proporções um pouco maiores do que o esperado e, portanto, algumas funcionalidades que estavam parcialmente prontas acabaram em estado de pendência.
